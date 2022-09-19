@@ -10,12 +10,15 @@
     "build": "npm run build-renderer && npm run build-electron",
     "pack-app": "npm run build && electron-builder --dir",
     "dist": "npm run build && electron-builder",
-    "type-check": "tsc -p ./renderer/tsconfig.json && tsc -p ./electron-src/tsconfig.json"
+    "type-check": "tsc -p ./renderer/tsconfig.json && tsc -p ./electron-src/tsconfig.json",
+    "start": "electron .",
+    "package": "electron-builder"
   },
   "dependencies": {
     "@prisma/client": "^4.3.1",
     "electron-is-dev": "^1.1.0",
     "electron-next": "^3.1.5",
+    "electron-updater": "^5.2.1",
     "next": "12.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
@@ -36,6 +39,13 @@
     "files": [
       "main",
       "renderer/out"
-    ]
+    ],
+
+    "publish" : [{
+        "provider": "github",
+        "owner": "myworkdemo",
+        "repo": "nextjs-with-electronjs-demo"
+      }]
   }
 }
+
