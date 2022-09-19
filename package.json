@@ -1,7 +1,7 @@
 {
   "private": true,
   "main": "main/index.js",
-  "productName": "ElectronTypescriptNext",
+  "productName": "Baby Gift Store",
   "scripts": {
     "clean": "rimraf dist main renderer/out renderer/.next",
     "dev": "npm run build-electron && electron .",
@@ -13,17 +13,20 @@
     "type-check": "tsc -p ./renderer/tsconfig.json && tsc -p ./electron-src/tsconfig.json"
   },
   "dependencies": {
+    "@prisma/client": "^4.3.1",
     "electron-is-dev": "^1.1.0",
     "electron-next": "^3.1.5",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "next": "12.3.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@types/node": "^14.14.6",
-    "@types/react": "^16.9.9",
-    "@types/react-dom": "^16.9.9",
+    "@types/node": "18.7.18",
+    "@types/react": "18.0.20",
     "electron": "^13",
     "electron-builder": "^23.0.3",
+    "eslint": "8.23.0",
+    "eslint-config-next": "12.3.0",
     "next": "latest",
     "rimraf": "^3.0.0",
     "typescript": "^4.0.5"
